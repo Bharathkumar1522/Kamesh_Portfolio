@@ -106,14 +106,9 @@ export default function SkillsMatrix() {
                 className="p-5 rounded-lg bg-obsidian-850 border border-white/10 hover:border-champagne-500/40 transition-all duration-200 group flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="flex items-center gap-2 text-xs font-mono text-slate-400">
-                      <CatIcon className="w-3.5 h-3.5 text-champagne-400" />
-                      <span>{skill.category}</span>
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-white/10 bg-white/5 text-slate-300 uppercase tracking-wider">
-                      {skill.level}
-                    </span>
+                  <div className="flex items-center gap-2 text-xs font-mono text-slate-400 mb-3">
+                    <CatIcon className="w-3.5 h-3.5 text-champagne-400" />
+                    <span>{skill.category}</span>
                   </div>
 
                   <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-champagne-300 transition-colors">
