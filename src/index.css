@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default Dark Obsidian Surfaces */
+    --obsidian-950: 7 8 11;
+    --obsidian-900: 11 13 18;
+    --obsidian-850: 16 19 26;
+    --obsidian-800: 22 26 36;
+    --obsidian-700: 35 41 56;
+    --obsidian-600: 52 61 82;
+
+    /* Accent Defaults: Champagne Gold */
+    --accent-400: 237 213 166;
+    --accent-500: 223 194 141;
+    --accent-600: 204 168 107;
+    --accent-700: 163 129 68;
+
+    --grid-line-color: rgba(255, 255, 255, 0.035);
+    --dot-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Accent Variations - Dark */
+  [data-accent="emerald"] {
+    --accent-400: 52 211 153;
+    --accent-500: 16 185 129;
+    --accent-600: 5 150 105;
+    --accent-700: 4 120 87;
+  }
+  [data-accent="cyan"] {
+    --accent-400: 56 189 248;
+    --accent-500: 6 182 212;
+    --accent-600: 8 145 178;
+    --accent-700: 14 116 144;
+  }
+
+  /* Light Mode Overrides */
+  html.light-mode {
+    color-scheme: light;
+    --obsidian-950: 248 250 252;
+    --obsidian-900: 255 255 255;
+    --obsidian-850: 241 245 249;
+    --obsidian-800: 226 232 240;
+    --obsidian-700: 203 213 225;
+    --obsidian-600: 148 163 184;
+
+    /* Light Mode Gold */
+    --accent-400: 180 140 54;
+    --accent-500: 154 115 34;
+    --accent-600: 126 92 24;
+    --accent-700: 100 70 18;
+
+    --grid-line-color: rgba(15, 23, 42, 0.045);
+    --dot-color: rgba(15, 23, 42, 0.08);
+  }
+
+  html.light-mode[data-accent="emerald"] {
+    --accent-400: 5 150 105;
+    --accent-500: 4 120 87;
+    --accent-600: 6 95 70;
+    --accent-700: 6 78 59;
+  }
+
+  html.light-mode[data-accent="cyan"] {
+    --accent-400: 2 132 199;
+    --accent-500: 14 116 144;
+    --accent-600: 21 94 117;
+    --accent-700: 22 78 99;
+  }
+
+  body {
+    background-color: rgb(var(--obsidian-950));
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--obsidian-950));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--obsidian-700));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--accent-500));
+  }
+
+  .font-display {
+    font-family: 'Cabinet Grotesk', 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.015em;
+    font-stretch: 100%;
+  }
+
+  /* Light mode typography & contrast adaptivity */
+  html.light-mode body {
+    color: #1e293b;
+  }
+  html.light-mode .text-white {
+    color: #0f172a !important;
+  }
+  html.light-mode .text-slate-100 {
+    color: #0f172a !important;
+  }
+  html.light-mode .text-slate-200 {
+    color: #1e293b !important;
+  }
+  html.light-mode .text-slate-300 {
+    color: #334155 !important;
+  }
+  html.light-mode .text-slate-400 {
+    color: #64748b !important;
+  }
+  html.light-mode .text-slate-500 {
+    color: #94a3b8 !important;
+  }
+  html.light-mode .border-white\/5,
+  html.light-mode .border-white\/10 {
+    border-color: rgba(15, 23, 42, 0.08) !important;
+  }
+  html.light-mode .border-white\/15,
+  html.light-mode .border-white\/20 {
+    border-color: rgba(15, 23, 42, 0.14) !important;
+  }
+  html.light-mode .bg-white\/5 {
+    background-color: rgba(15, 23, 42, 0.04) !important;
+  }
+  html.light-mode .bg-white\/10 {
+    background-color: rgba(15, 23, 42, 0.08) !important;
+  }
+
+  /* Action buttons text contrast in light mode */
+  html.light-mode .bg-champagne-500 {
+    color: #ffffff !important;
+  }
+  html.light-mode .bg-champagne-500 * {
+    color: #ffffff !important;
+  }
+
+  /* Terminal authentic developer chrome preservation */
+  .terminal-window,
+  .terminal-window * {
+    color-scheme: dark;
+  }
+  html.light-mode .terminal-window {
+    background: #090b10 !important;
+    border-color: rgba(15, 23, 42, 0.2) !important;
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(15, 23, 42, 0.08) !important;
+  }
+  html.light-mode .terminal-window .text-white {
+    color: #f8fafc !important;
+  }
+  html.light-mode .terminal-window .text-slate-100 {
+    color: #f8fafc !important;
+  }
+  html.light-mode .terminal-window .text-slate-200 {
+    color: #e2e8f0 !important;
+  }
+  html.light-mode .terminal-window .text-slate-300 {
+    color: #cbd5e1 !important;
+  }
+  html.light-mode .terminal-window .text-slate-400 {
+    color: #94a3b8 !important;
+  }
+  html.light-mode .terminal-window .text-slate-500 {
+    color: #64748b !important;
+  }
+  html.light-mode .terminal-window .border-white\/10,
+  html.light-mode .terminal-window .border-white\/5 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  html.light-mode .terminal-window .bg-obsidian-900 {
+    background-color: #0d1117 !important;
+  }
+  html.light-mode .terminal-window .bg-obsidian-950\/80 {
+    background-color: rgba(9, 11, 16, 0.9) !important;
+  }
+  html.light-mode .terminal-window .bg-obsidian-850 {
+    background-color: #161b22 !important;
+  }
+}
+
+/* Subtle architectural grid pattern */
+.bg-grid-architectural {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+}
+
+/* Glass panel */
+.glass-obsidian {
+  background: rgba(14, 17, 24, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+html.light-mode .glass-obsidian {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.glass-obsidian-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-obsidian-hover:hover {
+  background: rgba(22, 26, 36, 0.85);
+  border-color: rgb(var(--accent-500) / 0.35);
+  transform: translateY(-2px);
+}
+html.light-mode .glass-obsidian-hover:hover {
+  background: rgba(241, 245, 249, 0.95);
+  border-color: rgb(var(--accent-500) / 0.4);
+}
+
+/* Terminal window styling */
+.terminal-window {
+  background: #090b10;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Crosshair marker for architectural precision */
+.crosshair-corner {
+  position: relative;
+}
+.crosshair-corner::before {
+  content: "+";
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgb(var(--accent-500) / 0.5);
+}
+.crosshair-corner::after {
+  content: "+";
+  position: absolute;
+  bottom: -8px;
+  right: -6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgb(var(--accent-500) / 0.5);
+}

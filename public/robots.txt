@@ -1,0 +1,5 @@
+# robots.txt for V. Kamesh Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://kamesh-portfolio.vercel.app/sitemap.xml

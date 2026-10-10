@@ -1,0 +1,25 @@
+# V. Kamesh - Java & Distributed Systems Developer
+
+> Detail-oriented Java Developer (MCA CGPA 8.48) specializing in enterprise Java, Aegis Gateway military-grade communication security, and decentralized ledgers on Binance Smart Chain.
+
+## Core Information
+- Name: V. Kamesh
+- Role: Java Developer (Entry-Level / Fresher)
+- Degree: Master of Computer Applications (MCA), Sri Venkateswara College of Engineering (2024-2026), CGPA 8.48 / 10
+- Bachelor: Bachelor of Science (B.Sc), Vedavyasa Degree College (2021-2024), CGPA 7.90 / 10
+- Email: kamesh0818@gmail.com
+- Phone: +91 6302373105
+- Location: Nagalapuram, Andhra Pradesh, India
+- LinkedIn: https://linkedin.com/in/v-kamesh
+- GitHub: https://github.com/Kamesh0818
+
+## Featured Systems & Projects
+- Aegis Gateway: Java-based military gateway defense with JSCSP XSS mitigation and 3+ officer clearance tiers. Java Servlets, JDBC, REST APIs, MySQL.
+- AgriChain Platform: Decentralized supply chain platform connecting 5 stakeholder tiers via Binance Smart Chain & IPFS.
+- SmartFinance: Offline-first personal finance platform with localStorage persistence and Chart.js analytics. Live at https://smartfinance-sepia.vercel.app/
+
+## Core Technical Skills
+- Java (Core OOP, Servlets, JDBC, Streams, Multithreading, Exception Handling)
+- Web3 & Blockchain (Solidity, Binance Smart Chain, IPFS, Web3.py, Web3.js)
+- Databases (MySQL normalization, Relational Schema Design, SQL queries)
+- Web & Frontend (JavaScript ES6+, HTML5, CSS3, Chart.js, Tailwind CSS)
