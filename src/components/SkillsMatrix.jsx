@@ -7,14 +7,13 @@ import {
   Database, 
   Wrench, 
   Search, 
-  Sparkles,
   Layers
 } from 'lucide-react';
 
 const categoryIcons = {
   "Languages & Core": Code2,
   "Enterprise Java & Backend": Server,
-  "Security & Distributed Systems": ShieldCheck,
+  "Security & Distributed": ShieldCheck,
   "Databases & Storage": Database,
   "Toolchains & Practices": Wrench,
 };
@@ -37,14 +36,14 @@ export default function SkillsMatrix() {
   });
 
   return (
-    <section id="skills" className="py-24 bg-obsidian-900 bg-dot-pattern border-b border-white/10 relative scroll-mt-20">
+    <section id="skills" className="py-20 sm:py-24 bg-obsidian-900 bg-dot-pattern border-b border-white/10 relative scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-3">
-              <span>SECTION 02</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 text-xs font-mono tracking-widest uppercase mb-3">
+              <span>02</span>
               <span>&bull;</span>
               <span>TECHNICAL MATRIX</span>
             </div>
@@ -52,18 +51,18 @@ export default function SkillsMatrix() {
               Engineering Competencies
             </h2>
           </div>
-          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1.5">
-            <span className="text-xs font-mono text-champagne-400 bg-champagne-500/10 border border-champagne-500/20 px-2.5 py-0.5 rounded w-fit">
-              {filteredSkills.length} SKILLS ACTIVE IN VIEW
+          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1">
+            <span className="text-xs font-mono text-slate-400">
+              {filteredSkills.length} Verified Competencies
             </span>
             <p className="text-xs sm:text-sm font-mono text-slate-400 max-w-md text-left md:text-right">
-              Rigorous foundations in Java backend engineering, transactional persistence, and cryptographic access systems.
+              Java backend architecture, cryptographic security policies, and distributed persistence.
             </p>
           </div>
         </div>
 
         {/* Filter Bar & Search */}
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-10">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8">
           {/* Category Tabs with mobile touch swipe */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 snap-x">
             {allCategories.map(cat => (
@@ -89,7 +88,7 @@ export default function SkillsMatrix() {
               name="skill-search"
               type="text"
               aria-label="Search technical skills"
-              placeholder="Search skills (e.g. Java, JDBC, CSP)..."
+              placeholder="Filter skills (e.g. Java, JDBC, CSP)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-4 py-2 text-xs font-mono bg-obsidian-950 border border-white/10 rounded focus:outline-none focus:border-champagne-500/60 text-slate-200 placeholder-slate-500"
@@ -104,7 +103,7 @@ export default function SkillsMatrix() {
             return (
               <div
                 key={index}
-                className="p-5 rounded-lg bg-obsidian-850/90 border border-white/10 hover:border-champagne-500/30 transition-all duration-200 group flex flex-col justify-between"
+                className="p-5 rounded-lg bg-obsidian-850 border border-white/10 hover:border-champagne-500/40 transition-all duration-200 group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -112,31 +111,18 @@ export default function SkillsMatrix() {
                       <CatIcon className="w-3.5 h-3.5 text-champagne-400" />
                       <span>{skill.category}</span>
                     </span>
-                    <span
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
-                        skill.level === 'Advanced'
-                          ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
-                          : skill.level === 'Proficient'
-                          ? 'bg-amber-500/10 text-amber-300 border-amber-500/20'
-                          : 'bg-slate-500/10 text-slate-300 border-slate-500/20'
-                      }`}
-                    >
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded border border-white/10 bg-white/5 text-slate-300 uppercase tracking-wider">
                       {skill.level}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-lg font-bold text-white group-hover:text-champagne-300 transition-colors">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-champagne-300 transition-colors">
                     {skill.name}
                   </h3>
                   
-                  <p className="text-xs text-slate-400 leading-relaxed mt-2">
+                  <p className="text-xs text-slate-400 leading-relaxed mt-2 font-mono">
                     {skill.desc}
                   </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-slate-500">
-                  <span>VERIFIED VIA PROJECTS</span>
-                  <span className="text-champagne-500/60">&bull;</span>
                 </div>
               </div>
             );

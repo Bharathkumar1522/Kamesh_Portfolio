@@ -12,8 +12,8 @@ export default function Trajectory() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-3">
-              <span>SECTION 03</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 text-xs font-mono tracking-widest uppercase mb-3">
+              <span>03</span>
               <span>&bull;</span>
               <span>CAREER & EDUCATION</span>
             </div>
@@ -21,9 +21,9 @@ export default function Trajectory() {
               Experience & Academic Record
             </h2>
           </div>
-          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1.5">
-            <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded w-fit">
-              2 INTERNSHIPS &bull; 8.48 CGPA MCA
+          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1">
+            <span className="text-xs font-mono text-slate-400">
+              2 Corporate Internships &bull; 8.48 CGPA MCA
             </span>
             <p className="text-xs sm:text-sm font-mono text-slate-400 max-w-md text-left md:text-right">
               Verified corporate internships in enterprise Java and high-distinction MCA computer science background.
@@ -115,7 +115,7 @@ export default function Trajectory() {
                       <span className="text-xs font-mono text-slate-400">
                         {edu.period}
                       </span>
-                      <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                      <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-white/5 text-slate-200 border border-white/10">
                         {edu.score}
                       </span>
                     </div>

@@ -65,8 +65,8 @@ END:VCARD`;
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-3">
-              <span>SECTION 05</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 text-xs font-mono tracking-widest uppercase mb-3">
+              <span>05</span>
               <span>&bull;</span>
               <span>DIRECT COMMUNICATIONS</span>
             </div>
@@ -74,11 +74,11 @@ END:VCARD`;
               Initiate Inquiries & Hiring
             </h2>
           </div>
-          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1.5">
-            <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded w-fit flex items-center gap-1.5">
+          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              IMMEDIATELY AVAILABLE &bull; FULL-TIME
-            </span>
+              <span>Available Immediately &bull; Full-Time</span>
+            </div>
             <p className="text-xs sm:text-sm font-mono text-slate-400 max-w-md text-left md:text-right">
               Available immediately for full-time Java Developer, Backend Engineering, or Associate Software Engineer opportunities.
             </p>

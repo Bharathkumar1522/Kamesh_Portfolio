@@ -100,12 +100,12 @@
     font-stretch: 100%;
   }
 
-  /* Light mode typography & contrast adaptivity */
+  /* Light mode typography & high contrast rules */
   html.light-mode body {
-    color: #1e293b;
+    color: #0f172a;
   }
   html.light-mode .text-white {
-    color: #0f172a !important;
+    color: #090d16 !important;
   }
   html.light-mode .text-slate-100 {
     color: #0f172a !important;
@@ -117,18 +117,21 @@
     color: #334155 !important;
   }
   html.light-mode .text-slate-400 {
-    color: #64748b !important;
+    color: #334155 !important;
   }
   html.light-mode .text-slate-500 {
-    color: #94a3b8 !important;
+    color: #475569 !important;
+  }
+  html.light-mode .text-slate-600 {
+    color: #475569 !important;
   }
   html.light-mode .border-white\/5,
   html.light-mode .border-white\/10 {
-    border-color: rgba(15, 23, 42, 0.08) !important;
+    border-color: rgba(15, 23, 42, 0.12) !important;
   }
   html.light-mode .border-white\/15,
   html.light-mode .border-white\/20 {
-    border-color: rgba(15, 23, 42, 0.14) !important;
+    border-color: rgba(15, 23, 42, 0.18) !important;
   }
   html.light-mode .bg-white\/5 {
     background-color: rgba(15, 23, 42, 0.04) !important;
@@ -143,6 +146,45 @@
   }
   html.light-mode .bg-champagne-500 * {
     color: #ffffff !important;
+  }
+
+  /* Interactive Simulator Consoles */
+  .simulator-console {
+    background-color: #07090e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  html.light-mode .simulator-console {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  }
+  html.light-mode .simulator-console .text-white {
+    color: #0f172a !important;
+  }
+  html.light-mode .simulator-console .text-slate-300,
+  html.light-mode .simulator-console .text-slate-400 {
+    color: #334155 !important;
+  }
+  html.light-mode .simulator-console .text-slate-500 {
+    color: #475569 !important;
+  }
+  html.light-mode .simulator-console .text-amber-300,
+  html.light-mode .simulator-console .text-amber-400 {
+    color: #b45309 !important;
+  }
+  html.light-mode .simulator-console .text-emerald-300,
+  html.light-mode .simulator-console .text-emerald-400 {
+    color: #047857 !important;
+  }
+  html.light-mode .simulator-console .text-cyan-300,
+  html.light-mode .simulator-console .text-cyan-400 {
+    color: #0e7490 !important;
+  }
+  html.light-mode .simulator-console .text-rose-400 {
+    color: #be123c !important;
+  }
+  html.light-mode .simulator-console .border-white\/10 {
+    border-color: #e2e8f0 !important;
   }
 
   /* Terminal authentic developer chrome preservation */

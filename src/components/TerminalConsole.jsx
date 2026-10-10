@@ -114,8 +114,8 @@ export default function TerminalConsole({ onCopyEmail }) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-6 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-champagne-500/10 border border-champagne-500/30 text-champagne-400 text-xs font-mono tracking-widest uppercase mb-3">
-              <span>SECTION 04</span>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 text-xs font-mono tracking-widest uppercase mb-3">
+              <span>04</span>
               <span>&bull;</span>
               <span>SYSTEM DIAGNOSTICS</span>
             </div>
@@ -123,11 +123,11 @@ export default function TerminalConsole({ onCopyEmail }) {
               Interactive Diagnostic CLI
             </h2>
           </div>
-          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1.5">
-            <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded w-fit flex items-center gap-1.5">
+          <div className="mt-4 md:mt-0 flex flex-col md:items-end gap-1">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              OPENJDK 21 RUNTIME ACTIVE
-            </span>
+              <span>OpenJDK 21 Runtime Active</span>
+            </div>
             <p className="text-xs sm:text-sm font-mono text-slate-400 max-w-md text-left md:text-right">
               Query runtime specifications, security audit passes, and candidate credentials in real time.
             </p>

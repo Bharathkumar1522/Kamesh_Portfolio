@@ -45,17 +45,16 @@ export default function Hero({ onCopyEmail, onOpenTerminal }) {
 
             {/* Sub-headline description - concise and spacious */}
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl mb-4 font-normal">
-              Detail-oriented Java Developer (MCA CGPA 8.48) with verified experience architecting military-grade secure communication platforms (Aegis Gateway) and decentralized smart contracts on Binance Smart Chain.
+              {personalInfo.summary}
             </p>
 
             {/* Technical Highlights Badges */}
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-5">
               {[
-                { label: 'Java OOP / Servlets / JDBC', icon: Cpu },
-                { label: 'REST API Design', icon: Terminal },
-                { label: 'Military-Grade CSP Defense', icon: ShieldCheck },
+                { label: 'Java OOP & Multithreading', icon: Cpu },
+                { label: 'REST APIs & Servlets', icon: Terminal },
+                { label: 'CSP Defense & Granular RBAC', icon: ShieldCheck },
                 { label: 'Binance Smart Chain & IPFS', icon: Blocks },
-                { label: 'MySQL Normalization', icon: Cpu },
               ].map((badge, idx) => (
                 <div
                   key={idx}
